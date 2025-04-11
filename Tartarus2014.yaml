@@ -1,0 +1,473 @@
+payload:
+  # Block Ads Start
+  # 0~9
+  # > 21st Century Business Herald - api.21jingji.com
+  - URL-REGEX,^https?:\/\/api\.21jingji\.com\/ad\/,REJECT
+  # > 4gTV - service.4gtv.tv
+  - URL-REGEX,^https?:\/\/service\.4gtv\.tv\/4gtv\/Data\/(GetAD|ADLog),REJECT
+  # > 58 - app.58.com,pic?.ajkimg.com
+  - URL-REGEX,^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/,REJECT
+  - URL-REGEX,^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv,REJECT
+  - URL-REGEX,^https?:\/\/app\.58\.com\/api\/log\/,REJECT
+  - URL-REGEX,^https?:\/\/pic\d\.ajkimg\.com\/mat\/\w+\?imageMogr\d\/format\/jpg\/thumbnail\/\d{3}x\d{4}$,REJECT
+  - URL-REGEX,^https?:\/\/\w+\.58cdn\.com\.cn\/brandads\/,REJECT
+  # A
+  # --- (Alibaba) ---
+  # > Taobao - gw.alicdn.com,heic.alicdn.com
+  - URL-REGEX,^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/.+\.jpg_(9\d{2}|\d{4}),REJECT
+  - URL-REGEX,^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}),REJECT
+  # > Xianyu - acs.m.taobao.com
+  - URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/,REJECT
+  # > Fliggy - acs.m.taobao.com
+  - URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/,REJECT
+  # > Taopiaopiao - acs.m.taobao.com
+  - URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/,REJECT
+  # > AMap - m*.amap.com
+  - URL-REGEX,^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/,REJECT
+  # > YOUKU
+  - URL-REGEX,^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid=,REJECT
+  - URL-REGEX,^https?:\/\/[\w-.]+\.ott\.cibntv\.net\/[\w\/-]+.mp4\?ccode=02010101,REJECT
+  # ---
+  # > AcFun - api-new.app.acfun.cn
+  - URL-REGEX,^https?:\/\/api-new\.app\.acfun\.cn\/rest\/app\/flash\/screen\/,REJECT
+  # > AiMeiJu - api.bjxkhc.com
+  - URL-REGEX,^https?:\/\/api\.bjxkhc\.com\/index\.php\/app\/ios\/ads\/,REJECT
+  # B
+  # > ByteDance
+  - URL-REGEX,^https?:\/\/[\w-]+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/,REJECT
+  - URL-REGEX,^https?:\/\/[\w-]+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/img\/ad\.union\.api\/,REJECT
+  - URL-REGEX,^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/,REJECT
+  # ---(Baidu)---
+  # > Baidu NetDisk - issuecdn.baidupcs.com
+  - URL-REGEX,^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx,REJECT
+  - URL-REGEX,^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry,REJECT
+  - URL-REGEX,^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao,REJECT
+  # > Baidu Tieba
+  - URL-REGEX,^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule,REJECT
+  - URL-REGEX,^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo,REJECT
+  - URL-REGEX,^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog),REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\/\w+\/(sync|newRnSync|mlog),REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/c\/s\/splashSchedule,REJECT
+  # > Baidu Map - newclient.map.baidu.com
+  - URL-REGEX,^https?:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads,REJECT
+  # > Baidu InputMethod - mime.baidu.com
+  - URL-REGEX,^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo$,REJECT
+  - URL-REGEX,^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement,REJECT
+  # > iQIYI - act.vip.iqiyi.com,intl.iqiyi.com
+  - URL-REGEX,^https?:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo,REJECT
+  - URL-REGEX,^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do,REJECT
+  - URL-REGEX,^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show,REJECT
+  - URL-REGEX,^https?:\/\/intl\.iqiyi\.com\/ad_external\/,REJECT
+  - URL-REGEX,^https?:\/\/intl\.iqiyi\.com\/video\/advertise,REJECT
+  - URL-REGEX,^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_,REJECT
+  # ---
+  # > bilibili - app.bilibili.com,manga.bilibili.com
+  - URL-REGEX,^https?:\/\/app\.bilibili\.com\/x\/v\d\/splash\/,REJECT
+  - URL-REGEX,^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash,REJECT
+  # > BeiTaiKitchen - channel.beitaichufang.com
+  - URL-REGEX,^https?:\/\/channel\.beitaichufang\.com\/channel\/api\/v\d\/promote\/ios\/start\/page,REJECT
+  # > BiShiJie - iapi.bishijie.com
+  - URL-REGEX,^https?:\/\/iapi\.bishijie\.com\/actopen\/v\d\/advertising\/,REJECT
+  # > Beike - app.api.ke.com
+  - URL-REGEX,^https?:\/\/app\.api\.ke\.com\/config\/config\/bootpage,REJECT
+  # > boohee
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/app_square\/start_up_with_ad$,REJECT
+  # > bodivis - www.bodivis.com.cn
+  - URL-REGEX,^https?:\/\/www\.bodivis\.com\.cn\/app\/splashAdvertise,REJECT
+  # > BabyHealth - yxyapi*.drcuiyutao.com
+  - URL-REGEX,^https?:\/\/yxyapi\d\.drcuiyutao\.com\/yxy-api-gateway\/api\/json\/advert\/,REJECT
+  # C
+  # > ChinaMobile - clientaccess.10086.cn
+  - URL-REGEX,^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit,REJECT
+  - URL-REGEX,^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query,REJECT
+  # ---
+  # > ChinaUnicom - m.client.10010.com
+  - URL-REGEX,^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm,REJECT
+  - URL-REGEX,^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd,REJECT
+  # ---(ChinaTelecom)---
+  # > Cloud189 - cloud.189.cn
+  - URL-REGEX,^https?:\/\/cloud\.189\.cn\/include\/splash\/,REJECT
+  # > YueMeTV
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d):\d+/xygj-config-api\/queryData,REJECT
+  # ---
+  # > CNTV
+  - URL-REGEX,^https?:\/\/www\.cntv\.cn\/nettv\/adp\/,REJECT
+  # > Chelaile - api.chelaile.net.cn,web.chelaile.net.cn
+  - URL-REGEX,^https?:\/\/api\.chelaile\.net\.cn\/adpub\/,REJECT
+  - URL-REGEX,^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/,REJECT
+  - URL-REGEX,^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub\/,REJECT
+  # > Caocao - cap.caocaokeji.cn
+  - URL-REGEX,^https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/,REJECT
+  # > CaijingNet - api.caijingmobile.com
+  - URL-REGEX,^https?:\/\/api\.caijingmobile\.com\/(ad|advert)\/,REJECT
+  - URL-REGEX,^https?:\/\/m\.caijing\.com\.cn\/startup_ad_ios\.html$,REJECT
+  # > CSDN - gw.csdn.net
+  - URL-REGEX,^https?:\/\/gw\.csdn\.net\/cms-app\/v\d+\/home_page\/open_advertisement,REJECT
+  # > Ctrip - m.ctrip.com
+  - URL-REGEX,^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList,REJECT
+  # D
+  # > DU - app.poizon.com
+  - URL-REGEX,^https?:\/\/app\.poizon\.com\/api\/v\d\/app\/advertisement\/,REJECT
+  # > douban - api.douban.com
+  - URL-REGEX,^https?:\/\/api\.douban\.com\/v\d\/app_ads\/,REJECT
+  # > DouYuZhiBo - rtbapi.douyucdn.cn
+  - URL-REGEX,^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo,REJECT
+  # > Dangdang - e.dangdang.com
+  - URL-REGEX,^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init,REJECT
+  - URL-REGEX,^https?:\/\/e\.dangdang\.com\/media\/api\d\.go\?action=getDeviceStartPage,REJECT
+  # > Daoyu - daoyu.sdo.com
+  - URL-REGEX,^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd,REJECT
+  # > Dida
+  - URL-REGEX,^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/www\.didapinche\.com\/app\/adstat\/,REJECT
+  # > Dianshijia
+  - URL-REGEX,^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/,REJECT
+  # > DDpai
+  - URL-REGEX,^https?:\/\/app\.ddpai\.com\/d\/api\/v\d\/config\/get\/bootscreen,REJECT
+  # > DingDongMaiCai - maicai.api.ddxq.mobi
+  - URL-REGEX,^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/,REJECT
+  # E
+  # > eLong - mobileapi-v6.elong.com
+  - URL-REGEX,^https?:\/\/mobileapi-v6\.elong\.com\/adgateway\/,REJECT
+  # > eDaijia
+  - URL-REGEX,^https?:\/\/pic\.edaijia\.cn\/adsplash\/,REJECT
+  # > eleme
+  - URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_\d{3},h_\d{4}\/format,webp\/,REJECT
+  - URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_1\d{3},h_2\d{3}\/format,webp\/,REJECT
+  - URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/[\w\/]+\.jpeg\?x-oss-process=image\/resize,m_fill,w_6\d{2},h_8\d{2}\/format,webp\/,REJECT
+  - URL-REGEX,^https?:\/\/cube\.elemecdn\.com\/\w\/\w{2}\/\w+mp4\.mp4\?,REJECT
+  # > ezviz ViedoGo - i.ys7.com
+  - URL-REGEX,^https?:\/\/i\.ys7\.com\/api\/ads,REJECT
+  # F
+  # > Foodie
+  - URL-REGEX,^https?:\/\/foodie-api\.yiruikecorp\.com\/v\d\/(banner|notice)\/overview,REJECT
+  # > FOTOABLE
+  - URL-REGEX,^https?:\/\/cdn\.api\.fotoable\.com\/Advertise\/,REJECT
+  # > FlyerTea - www.flyertea.com
+  - URL-REGEX,^https?:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis,REJECT
+  # > FengWatch - dsa-mfp.fengshows.cn
+  - URL-REGEX,^https?:\/\/dsa-mfp\.fengshows\.cn\/mfp\/mfpMultipleDelivery\.do\?[a-z0-9&=]+adunitid,REJECT
+  # > feng - api.feng.com
+  - URL-REGEX,^https?:\/\/api\.feng\.com\/v\d\/advertisement\/.*Claunch,REJECT
+  # > FaceBeauty - *-release.wuta-cam.com
+  - URL-REGEX,^https?:\/\/api-release\.wuta-cam\.com\/ad_tree,REJECT
+  - URL-REGEX,^https?:\/\/res-release\.wuta-cam\.com\/json\/ads_component_cache\.json,REJECT
+  # G
+  # > Google - *.googlevideo.com,www.youtube.com,s.youtube.com
+  # - URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+(&oad|ctier),REJECT # Commented out in original, kept commented
+  - URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads,REJECT
+  - URL-REGEX,^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking),REJECT
+  - URL-REGEX,^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat=,REJECT
+  # > Gofun - gateway.shouqiev.com
+  - URL-REGEX,^https?:\/\/gateway\.shouqiev\.com(:8443)?\/fsda\/app\/bootImage\.json,REJECT
+  # > Guotai Junan Securities - dl.app.gtja.com
+  - URL-REGEX,^https?:\/\/dl\.app\.gtja\.com\/dzswem\/kvController\/[\w\/]+\.jpg$,REJECT
+  # H
+  # > HangZhou CityzenCard - smkmp.96225.com
+  - URL-REGEX,^https?:\/\/smkmp\.96225.com\/smkcenter\/ad/,REJECT
+  # > Huomao - api.huomao.com
+  - URL-REGEX,^https?:\/\/api\.huomao\.com\/channels\/loginAd,REJECT
+  # > HanjuTV
+  - URL-REGEX,^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\?,REJECT
+  # > Huya - business.msstatic.com
+  - URL-REGEX,^https?:\/\/business\.msstatic\.com\/advertiser\/,REJECT
+  # I
+  # > iFLY Input - imeclient.openspeech.cn
+  - URL-REGEX,^https?:\/\/imeclient\.openspeech\.cn\/adservice\/,REJECT
+  # > Intsig CamScaner - api.intsig.net
+  - URL-REGEX,^https?:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/,REJECT
+  # > iReader - ih2.ireader.com
+  - URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad,REJECT
+  - URL-REGEX,^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/,REJECT
+  # > inanning - nnapp.cloudbae.cn
+  - URL-REGEX,^https?:\/\/nnapp\.cloudbae\.cn:\d+\/mc\/api\/advert/,REJECT
+  # > iFreeTime
+  - URL-REGEX,^https?:\/\/api\.applovefrom\.com\/api\/v\d\/splash\/,REJECT
+  # > iCleaner - ib-soft.net
+  - URL-REGEX,^https?:\/\/ib-soft\.net\/icleaner\/txt\/ad_priority\.txt$,REJECT
+  # > Inoreader - www.inoreader.com
+  - URL-REGEX,^https?:\/\/www\.inoreader\.com\/adv\/,REJECT
+  # > i4 - list-app-m.i4.cn
+  - URL-REGEX,^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml,REJECT
+  # > iFreeTimebook - icc.one,jxd524.github.io
+  - URL-REGEX,^https?:\/\/jxd524\.github\.io\/iFreeTime\/xid32uxaoecnfv2\/,REJECT
+  - URL-REGEX,^https?:\/\/icc\.one\/iFreeTime\/xid32uxaoecnfv2\/,REJECT
+  # > IKOSPro
+  - URL-REGEX,^https?:\/\/tracker-download\.oss-cn-beijing\.aliyuncs\.com\/SIMPlus\/ad_,REJECT
+  - URL-REGEX,^https?:\/\/tracker-download\.oss-cn-beijing\.aliyuncs\.com\/SIMPlus\/AD\/,REJECT
+  # J
+  # > JD - api.m.jd.com,img*.360buyimg.com
+  - URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,REJECT
+  - URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts,REJECT
+  - URL-REGEX,^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/,REJECT
+  - URL-REGEX,^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/,REJECT
+  # > JiaXiaoeDianTong - api.jxedt.com
+  - URL-REGEX,^https?:\/\/api\.jxedt\.com\/ad\/,REJECT
+  # - URL-REGEX,^https?:\/\/richmanapi\.jxedt\.com\/api\/(ad|adplus)\/,REJECT # Commented out in original
+  # > JiaKaoBaoDian - *.kakamobi.cn
+  - URL-REGEX,^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/,REJECT
+  # > Jinse - app-api.jinse.com
+  - URL-REGEX,^https?:\/\/app-api\.jinse\.com\/v\d\/ad\/,REJECT
+  # K
+  # > Kingsoft - ios.wps.cn,*.kingsoft-office-service.com
+  - URL-REGEX,^https?:\/\/ios\.wps\.cn\/ad-statistics-service,REJECT
+  - URL-REGEX,^https?:\/\/\w+\.kingsoft-office-service\.com\/ad,REJECT
+  - URL-REGEX,^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?[\w=&]*(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController),REJECT
+  - URL-REGEX,^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson,REJECT
+  - URL-REGEX,^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/,REJECT
+  # > Keep - api.gotokeep.com
+  - URL-REGEX,^https?:\/\/api\.gotokeep\.com\/ads,REJECT
+  # > Kuaikan Comics - api.kkmh.com
+  - URL-REGEX,^https?:\/\/api\.kkmh\.com\/v\d+\/(ad|advertisement)\/,REJECT
+  # > KOOWO - 122.14.246.33,175.102.178.52
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/MobileAdServer\/,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/EcomResourceServer/AdPlayPage/adinfo,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/g\.real\?aid=text_ad,REJECT
+  # L
+  # > LaiFeng
+  - URL-REGEX,^https?:\/\/api\.laifeng\.com\/v\d\/start\/ads,REJECT
+  # > Lenovo - api.club.lenovo.cn
+  - URL-REGEX,^https?:\/\/api\.club\.lenovo\.cn\/common\/open_ad,REJECT
+  # M
+  # > MI - api.jr.mi.com,api-mifit*.huami.com,home.mi.com
+  - URL-REGEX,^https?:\/\/api\.m\.mi\.com\/v\d\/app\/start,REJECT
+  - URL-REGEX,^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/,REJECT
+  - URL-REGEX,^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen,REJECT
+  - URL-REGEX,^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\?,REJECT
+  - URL-REGEX,^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner,REJECT
+  # > MogoRenter - api.mgzf.com
+  - URL-REGEX,^https?:\/\/api\.mgzf\.com\/renter-operation\/home\/startHomePage,REJECT
+  # > MojiWeather - cdn.moji.com
+  - URL-REGEX,^https?:\/\/cdn\.moji\.com\/(adoss|adlink)\/,REJECT
+  # > ManHuaRen
+  - URL-REGEX,^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getStartPageAds,REJECT
+  # > Meituan-Dianping - img.meituan.net,p*.meituan.net,s3plus.meituan.net,flowplus.meituan.net
+  - URL-REGEX,^https?:\/\/img\.meituan\.net\/(adunion|display|dpmobile|midas)\/\w+\.(gif|jpg|jpg\.webp)$,REJECT
+  - URL-REGEX,^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4),REJECT
+  - URL-REGEX,^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg,REJECT
+  - URL-REGEX,^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp,REJECT
+  - URL-REGEX,^https?:\/\/wmapi\.meituan\.com\/api\/v\d\/startpicture,REJECT
+  # > mwee - capi.mwee.cn
+  - URL-REGEX,^https?:\/\/capi.mwee.cn/app-api/V\d+/app/(ad|getstartad),REJECT
+  # > MiaoPai
+  - URL-REGEX,^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/,REJECT
+  # > Mafengwo - mapi.mafengwo.cn
+  - URL-REGEX,^https?:\/\/mapi\.mafengwo\.cn\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/,REJECT
+  # > MixC - app.mixcapp.com
+  - URL-REGEX,^https?:\/\/app\.mixcapp\.com\/mixc\/api\/v\d\/ad,REJECT
+  # N
+  # ---(NetEase)---
+  # > NetEase MailMaster - appconf.mail.163.com
+  - URL-REGEX,^https?:\/\/appconf\.mail\.163\.com\/mmad\/,REJECT
+  # > NetEase News - c.m.163.com
+  - URL-REGEX,^https?:\/\/c\.m\.163\.com\/nc\/gl\/,REJECT
+  # > NetEase MoneyKeeper - client.mail.163.com
+  - URL-REGEX,^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds,REJECT
+  # > NetEase CloudMusic - interface*.music.163.com
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/,REJECT
+  # > NetEase Kaola - sp.kaola.com
+  - URL-REGEX,^https?:\/\/sp\.kaola\.com\/api\/openad,REJECT
+  # > NetEase You - support.you.163.com
+  - URL-REGEX,^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json,REJECT
+  # > NetEase SnailRead - p.du.163.com
+  - URL-REGEX,^https?:\/\/p\.du\.163\.com\/ad\/,REJECT
+  # ---
+  # > NationalGeographic
+  - URL-REGEX,^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/,REJECT
+  # > NationalGeographicChina
+  - URL-REGEX,^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/,REJECT
+  # > NIU - app-api.niu.com
+  - URL-REGEX,^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/,REJECT
+  # > Naver TV - gfp.veta.naver.com
+  - URL-REGEX,^https?:\/\/gfp\.veta\.naver\.com\/adcall\?,REJECT
+  # O
+  # > Oray - slapi.oray.net
+  - URL-REGEX,^https?:\/\/slapi\.oray\.net\/client\/ad,REJECT
+  - URL-REGEX,^https?:\/\/slapi\.oray\.net\/adver,REJECT
+  # P
+  # > PiaoGen - pss.txffp.com
+  - URL-REGEX,^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/,REJECT
+  # > Pinduoduo - api.yangkeduo.com,api.pinduoduo.com
+  - URL-REGEX,^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash,REJECT
+  # > PeanutWiFi
+  - URL-REGEX,^https?:\/\/cmsapi\.wifi8\.com\/v\d\/(emptyAd|adNew)\/,REJECT
+  # > PConline - mrobot.pconline.com.cn,mrobot.pcauto.com.cn
+  - URL-REGEX,^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\/,REJECT
+  - URL-REGEX,^https?:\/\/mrobot\.pconline\.com\.cn\/v\d\/ad2p,REJECT
+  - URL-REGEX,^https?:\/\/mrobot\.pconline\.com\.cn\/s\/onlineinfo\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/mrobot\.pcauto\.com\.cn\/v\d\/ad2p,REJECT
+  - URL-REGEX,^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/preload\.xsp,REJECT
+  # Q
+  # > QYER - open.qyer.com,media.qyer.com
+  - URL-REGEX,^https?:\/\/open\.qyer\.com\/qyer\/startpage\/,REJECT
+  - URL-REGEX,^https?:\/\/open\.qyer\.com\/qyer\/config\/get,REJECT
+  - URL-REGEX,^https?:\/\/media\.qyer\.com\/ad\/,REJECT
+  # > Qinbaobao - api.qbb6.com
+  - URL-REGEX,^https?:\/\/api\.qbb6\.com\/ad\/,REJECT
+  # > QDReader - mage.if.qidian.com
+  - URL-REGEX,^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen,REJECT
+  # R
+  # > RRtv - msspjh.emarbox.com,api.rr.tv
+  - URL-REGEX,^https?:\/\/msspjh\.emarbox\.com\/getAdConfig,REJECT
+  - URL-REGEX,^https?:\/\/api\.videozhishi\.com\/api\/getAdvertising,REJECT
+  - URL-REGEX,^https?:\/\/api\.rr\.tv\/ad\/,REJECT
+  # > RELX - app.relxtech.com
+  - URL-REGEX,^https?:\/\/app\.relxtech\.com\/dianziyan-api\/api\/screen\/advert\/random,REJECT
+  # S
+  # ---(Sina)---
+  # > Weibo - *.uve.weibo.com,weibointl.api.weibo.cn
+  - URL-REGEX,^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php,REJECT
+  - URL-REGEX,^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua,REJECT
+  - URL-REGEX,^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads,REJECT
+  # > tianqitong - tqt.weibo.cn
+  - URL-REGEX,^https?:\/\/tqt\.weibo\.cn\/overall\/redirect\.php\?r=(tqt_sdkad|tqtad),REJECT
+  - URL-REGEX,^https?:\/\/tqt\.weibo\.cn\/[\w=?&%.-]+advert\.index,REJECT
+  - URL-REGEX,^https?:\/\/tqt\.weibo\.cn\/api\/advert\/,REJECT
+  # ---
+  # > SOHU - *.k.sohu.com,*.tv.sohu.com
+  - URL-REGEX,^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense,REJECT
+  - URL-REGEX,^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/,REJECT
+  - URL-REGEX,^https?:\/\/s1\.api\.tv\.itc\.cn\/v\d\/mobile\/control\/switch\.json,REJECT
+  - URL-REGEX,^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap,REJECT
+  # > SMZDM - ap*.smzdm.com
+  - URL-REGEX,^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading,REJECT
+  - URL-REGEX,^https?:\/\/app-api\.smzdm\.com\/util\/loading,REJECT
+  - URL-REGEX,^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php,REJECT
+  # > SCore
+  - URL-REGEX,^https?:\/\/api\.qiuduoduo\.cn\/guideimage,REJECT
+  # > Shihuo
+  - URL-REGEX,^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo,REJECT
+  # > Shouqiyueche - gw-passenger.01zhuanche.com
+  - URL-REGEX,^https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/zhuanche-passengerController\/notk\/passenger\/recommendADs,REJECT
+  # > Suning - mpcs.suning.com
+  - URL-REGEX,^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo,REJECT
+  # > SOGO - business-cdn.shouji.sogou.com
+  # - URL-REGEX,^https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+\.(jpg|mp4|png),REJECT # Commented out in original
+  # > SF Express - ccsp-egmas.sf-express.com
+  - URL-REGEX,^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/,REJECT
+  # > SF HiveConsumer - consumer.fcbox.com
+  - URL-REGEX,^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/,REJECT
+  # > SuperFriday
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(:\d+)?\/V\d\/splash\/getSplashV\d\.action$,REJECT
+  # > Snail Sleep - snailsleep.net
+  - URL-REGEX,^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\?,REJECT
+  - URL-REGEX,^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/,REJECT
+  # T
+  # ---(Tencent)---
+  # > FUTU - api*.futunn.com
+  - URL-REGEX,^https?:\/\/api\.futunn\.com\/v\d\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/api\d\.futunn\.com\/ad\/,REJECT
+  # > Tencent Game - ssl.kohsocialapp.qq.com
+  - URL-REGEX,^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons,REJECT
+  - URL-REGEX,^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info,REJECT
+  # > Tencent Map - 4gimg.map.qq.com
+  - URL-REGEX,^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/,REJECT
+  # > Tencent Video
+  - URL-REGEX,^https?:\/\/vv\.video\.qq\.com\/getvmind\?,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+p20\d\.1\.mp4\?,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+=v3004,REJECT
+  - URL-REGEX,^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/[a-z.]+\.tc\.qq\.com\/[\w\W]+_p20\d_,REJECT
+  # > Tencent News - r.inews.qq.com
+  - URL-REGEX,^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig),REJECT
+  # > Tencent Sports - news.ssp.qq.com
+  - URL-REGEX,^https?:\/\/news\.ssp\.qq\.com\/app,REJECT
+  # > Tencent Music
+  - URL-REGEX,^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/music\/common\/upload\/t_splash_info\/,REJECT
+  # > Tencent WeChat - mp.weixin.qq.com
+  # - URL-REGEX,^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement),REJECT # Commented out in original
+  # ---
+  # > TuNiu - m.tuniu.com
+  - URL-REGEX,^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/,REJECT
+  # > TVBCLive - mob.mddcloud.com
+  - URL-REGEX,^https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/,REJECT
+  # U
+  # > UCar - img*.10101111cdn.com
+  - URL-REGEX,^https?:\/\/img\d+\.10101111cdn\.com\/adpos\/,REJECT
+  # > Umeng - msg.umengcloud.com
+  - URL-REGEX,^https:\/\/msg\.umengcloud\.com\/admsg\/,REJECT
+  # > Umetrip
+  - URL-REGEX,^https:\/\/img\.umetrip\.com\/fs\/advert/,REJECT
+  # V
+  # > VUE - api.vuevideo.net
+  - URL-REGEX,^https?:\/\/api\.vuevideo\.net\/api\/v\d\/ad\/,REJECT
+  # > VariFlight - app.variflight.com,api.cdmcaac.com
+  - URL-REGEX,^https?:\/\/app\.variflight\.com\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/app\.variflight\.com\/v\d\/advert\/,REJECT
+  - URL-REGEX,^https?:\/\/api\.cdmcaac\.com\/ad\/,REJECT
+  # > VISTOPIA - api.vistopia.com.cn
+  - URL-REGEX,^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement,REJECT
+  # W
+  # > WeDoctor - app.wy.guahao.com
+  - URL-REGEX,^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad,REJECT
+  # > Weico
+  - URL-REGEX,^https?:\/\/overseas\.weico\.cc/portal\.php\?a=get_coopen_ads,REJECT
+  # > Weidian - thor.weidian.com
+  - URL-REGEX,^https?:\/\/thor\.weidian\.com\/ares\/home\.splash\/,REJECT
+  # > WaitWaitPay - api.waitwaitpay.com
+  # - URL-REGEX,^https?:\/\/api\.waitwaitpay\.com\/\/api\/splash,REJECT # Commented out in original
+  # > WallStCN - api.wallstcn.com
+  - URL-REGEX,^https?:\/\/api\.wallstcn\.com\/apiv\d\/advertising\/,REJECT
+  # X
+  # > Xiachufang - api.xiachufang.com
+  - URL-REGEX,^https?:\/\/api\.xiachufang\.com\/v\d\/ad/,REJECT
+  # > XiaoChaoBrain - api.psy-1.com
+  - URL-REGEX,^https?:\/\/api\.psy-1\.com\/cosleep\/startup,REJECT
+  # > Xunyou Game Booster - portal-xunyou.qingcdn.com
+  - URL-REGEX,^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(splash_ad|ad_urls),REJECT
+  - URL-REGEX,^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/,REJECT
+  # > Ximalaya FM
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/api\/v\d\/adRealTime,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(outadservice|ting\/preload)\/,REJECT
+  # > Xueqiu - api.xueqiu.com,promo.xueqiu.com,182.92.251.113,101.201.175.228
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/promotion\/(display_cache|display_ad|feed_display|search_ad),REJECT
+  - URL-REGEX,^https?:\/\/(api|promo)\.xueqiu\.com\/promotion\/(display_cache|display_ad|feed_display|search_ad),REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/brand\/search\/v1\.json,REJECT
+  - URL-REGEX,^https?:\/\/api\.xueqiu\.com\/brand\/search\/v1\.json,REJECT
+  # > Xiaohongshu - www.xiaohongshu.com
+  - URL-REGEX,^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config,REJECT
+  # Y
+  # > Youtube++
+  - URL-REGEX,^https?:\/\/api\.catch\.gift\/api\/v\d\/pagead\/,REJECT
+  # > YinxiangNote - app.yinxiang.com
+  - URL-REGEX,^https?:\/\/app\.yinxiang\.com\/ads\/,REJECT
+  # > YUNMAI - restapi.iyunmai.com
+  - URL-REGEX,^https?:\/\/restapi\.iyunmai\.com\/api\/ios\/ad\/,REJECT
+  # > YXLiveVideo - api.yizhibo.com
+  - URL-REGEX,^https?:\/\/api\.yizhibo\.com\/common\/api\/api_pz$,REJECT
+  - URL-REGEX,^https?:\/\/api\.yizhibo\.com\/common\/api\/pz$,REJECT
+  # Z
+  # > Zhihu - www.zhihu.com,api.zhihu.com
+  - URL-REGEX,^https?:\/\/api\.zhihu\.com\/commercial_api\/,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhihu\.com\/fringe\/ad,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhihu\.com\/ad,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhihu\.com\/appview\/api\/v\d\/answers\/\d+\/recommendations,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhihu\.com\/\w+\/\d+\/comments\/featured-comment-ad,REJECT
+  - URL-REGEX,^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers/\d+/recommendations,REJECT
+  # > zhibo8 - a.qiumibao.com
+  - URL-REGEX,^https?:\/\/a\.qiumibao\.com\/activities\/config\.php,REJECT
+  - URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d):\d+\/allOne\.php\?ad_name,REJECT
+  # > zhuishushenqi - *.zhuishushenqi.com
+  - URL-REGEX,^https?:\/\/(api|b)\.zhuishushenqi\.com\/advert,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhuishushenqi\.com\/splashes\/ios,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhuishushenqi\.com\/notification\/shelfMessage,REJECT
+  - URL-REGEX,^https?:\/\/api\.zhuishushenqi\.com\/user\/bookshelf-updated,REJECT
+  - URL-REGEX,^https?:\/\/itunes\.apple\.com\/lookup\?id=575826903,REJECT
+  # > Zuoyebang - www.zybang.com
+  - URL-REGEX,^https?:\/\/www\.zybang\.com\/adx\/,REJECT
+  # > ZUIYOU - api.izuiyou.com
+  - URL-REGEX,^https?:\/\/api\.izuiyou\.com\/ad\/,REJECT
+  # > Zhan - tiku.zhan.com
+  - URL-REGEX,^https?:\/\/tiku\.zhan\.com\/Common\/newAd\/,REJECT
+  # > Zhangyue - webboot.zhangyue.com,saad.ms.zhangyue.net
+  - URL-REGEX,^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/,REJECT
+  - URL-REGEX,^https?:\/\/saad\.ms\.zhangyue\.net\/ad,REJECT
+  # Block Ads End
